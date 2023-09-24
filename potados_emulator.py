@@ -1137,7 +1137,7 @@ class POTADOS_TESTS(unittest.TestCase):
                 self.assertEqual(potados.regs[potados.PC]==0, ops.cast(i16(r1), 'unsigned')<ops.cast(i16(r2), 'unsigned'))
 
 class POTADOS_COMPILATION_TESTS(unittest.TestCase):
-    profile = load_profile_from_file('profiles\\potados', load_emulator=False)
+    profile = load_profile_from_file('potados', load_emulator=False)
     def test_compile(self):
         output, context = quick.translate([
             'mov reg[1], 1',
